@@ -1,0 +1,36 @@
+{
+  "n": 1,
+  "title": "Open the Code tab and give it a rule book",
+  "time": "60 min",
+  "watch": "4 clips · 6 min",
+  "leaves": "Globus admin agent/CLAUDE.md",
+  "read": [
+    {"h": "Two tabs, two jobs", "p": ["The <dfn>Chat tab</dfn> talks. The <dfn>Code tab</dfn> works inside one folder on your computer: it reads the files there, writes new ones and runs things. Everything you build in this course lives in the Code tab, so session 1 is simply moving in.", "The first decision is the folder. One folder per job, never the whole desktop or the whole G: drive. For the Globus admin agent that means a folder holding only what the agent needs: course IDs, the rule book, later the skills. Stay <dfn>local</dfn> for now; cloud sessions need the folder on GitHub, and that is session 7."]},
+    {"h": "CLAUDE.md is the rule book", "p": ["A file called <dfn>CLAUDE.md</dfn> in the folder is read at the start of every session there. Think of it as the one-page rule book you would hand a new assistant on day one. Not for code; for the rules you keep repeating.", "Checked against the docs: Claude Code also reads a CLAUDE.md in your user folder (rules for every project) and in every folder above the one you open; they are joined together, and each should stay under about 200 lines."], "rule": "If you have corrected Claude twice on the same point, it belongs in CLAUDE.md."}
+  ],
+  "figure": "pieces",
+  "clips": [
+    {"v": "HuWjlcj3p9k", "t": 16, "label": "0:16", "title": "Where everything is", "sub": "Chat tab vs Code tab · 32 s"},
+    {"v": "HuWjlcj3p9k", "t": 48, "label": "0:48", "title": "Picking a folder", "sub": "\"One folder per job, never the whole desktop\" · 47 s"},
+    {"v": "HuWjlcj3p9k", "t": 95, "label": "1:35", "title": "Local vs cloud", "sub": "Cloud needs GitHub; beginners stay local · 50 s"},
+    {"v": "HuWjlcj3p9k", "t": 323, "label": "5:23", "title": "CLAUDE.md", "sub": "\"A rule book for a new employee\" · 39 s"}
+  ],
+  "clipsNote": "Tyler Mommsen, \"Master 99% of Claude Code in less than 10 minutes\". Each clip plays here from that second.",
+  "check": [
+    {"q": "Log yesterday's iCell lesson. Which tab?", "ok": "b", "opts": {"a": "Chat tab, it is a conversation about a lesson", "b": "Code tab, it must read the course journal and write a file"}, "why": "The Code tab works in your folder; Chat can only talk about it."},
+    {"q": "Which folder do you point the Code tab at?", "ok": "c", "opts": {"a": "The whole G: drive", "b": "20 Areas, with every course", "c": "A folder made for this one job"}, "why": "Wider folders make every session slower and give the agent files it should not touch."},
+    {"q": "Where does \"Globus numbers always win over the Sheet\" belong?", "ok": "a", "opts": {"a": "In CLAUDE.md", "b": "In every prompt", "c": "In a skill"}, "why": "A standing rule you would otherwise repeat. Skills are checklists for one job (session 3)."}
+  ],
+  "build": {
+    "where": "in the Code tab on dell-js · 35 min",
+    "folder": "Globus admin agent/",
+    "steps": [
+      {"p": "Code tab → Open folder → create <b>Globus admin agent</b> inside Teaching – Globus. Local. Permission mode: Manual (you are learning, so you approve each file)."},
+      {"p": "First message:", "pre": "Create CLAUDE.md in this folder: the rule book for an agent doing my Globus Language School admin. Numbered rules, plain English:\n1. Courses are identified by Globus course ID (e.g. Beres_B_E_A005_26_04), never by student names.\n2. Globus's figures on the Számlám page always win over any Sheet of mine.\n3. In the Globus portal: SAVE, never FINALISE or SUBMIT. I review first.\n4. Lesson serial numbers and planned dates are fixed; only the actual date changes.\n5. Budapest time only. British English.\n6. Before any portal step, state the course ID and lesson you are about to touch.\nThen a section \"What this agent will do\": e-log entry after each lesson · training-plan updates · end-of-course reports · month-end invoice draft. Mark all four \"not built yet\"."},
+      {"p": "Open the CLAUDE.md it wrote. Add one rule it missed. Save."},
+      {"p": "New chat, same folder:", "pre": "Read CLAUDE.md and tell me the three things you must never do.", "after": "Matches your rules → session done."}
+    ],
+    "gain": "CLAUDE.md ✓ (today) · skills/ (s3) · scheduled tasks (s5) · GitHub (s7)"
+  },
+  "next": "<b>Next: Session 2 · the first real job.</b> Models, effort, context, permission modes; the agent reads one course journal and drafts an e-log entry."
+}

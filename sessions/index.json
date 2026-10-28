@@ -1,0 +1,15 @@
+{
+  "track": "Globus admin agent, one hour at a time",
+  "intro": "Eight sessions. Each teaches one Claude Code capability and bolts it onto the same agent. Click a session on the map to open it below.",
+  "sessions": [
+    {"n": 1, "title": "Code tab + rule book", "capability": "CLAUDE.md", "gain": "knows your rules", "clips": "Tyler 0:16–5:23", "file": "s01.json"},
+    {"n": 2, "title": "First real job", "capability": "models · effort · context · modes", "gain": "drafts an e-log entry", "clips": "Tyler 2:25–4:49 · Marchese", "file": "s02.json"},
+    {"n": 3, "title": "Make it a skill", "capability": "a checklist for one job", "gain": "e-log skill, reusable", "clips": "Tyler 6:02 · #138"},
+    {"n": 4, "title": "Hands on the portal", "capability": "connectors + Chrome", "gain": "fills the e-log itself", "clips": "Tyler 6:42"},
+    {"n": 5, "title": "It knows when", "capability": "scheduled tasks + hooks", "gain": "month-end invoice draft", "clips": "Tyler 7:34 · #143"},
+    {"n": 6, "title": "Mods: use 2, build 1", "capability": "a pane of unlogged lessons", "gain": "status at a glance", "clips": "#191 · #145"},
+    {"n": 7, "title": "GitHub + plugins", "capability": "push the agent · adapt a repo", "gain": "lives in the cloud", "clips": "#180 · #121 · #152"},
+    {"n": 8, "title": "First product", "capability": "a sellable PDF, made in Code", "gain": "funds the subscriptions", "clips": "#181 · #125 · #11 · #165"}
+  ],
+  "parked": "Sub-agents and model splitting (s9) · Founder OS verdict: adopt / adopt+log / adapt / rebuild (s10) · Hooks in depth · Worktrees · Motion graphics track (Sirio, Tyler) · Fishnet v2"
+}

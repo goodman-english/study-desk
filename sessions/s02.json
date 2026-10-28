@@ -1,0 +1,38 @@
+{
+  "n": 2,
+  "title": "The first real job: one course journal in, one e-log draft out",
+  "time": "60 min",
+  "watch": "5 clips · 8 min",
+  "leaves": "Globus admin agent/drafts/<course ID>-lesson-<n>.md, and a note on which model and effort did it best",
+  "read": [
+    {"h": "Four dials you set before any job", "p": ["Under the prompt box the Code tab shows four things that change the result more than the wording of your prompt: the <dfn>model</dfn> (Fable, Opus, Sonnet, Haiku), the <dfn>effort</dfn> (how long it thinks), the <dfn>permission mode</dfn> (Manual, Plan, Auto) and the <dfn>context ring</dfn> (how full the chat is).", "Checked against the docs and prices: per million tokens Opus costs about 40× Haiku and 2× Sonnet; Fable about 2.5× Opus. Your plan pays in usage, not dollars, but the ratio is the same. The rule for the agent: <b>Opus builds, Sonnet runs, Haiku checks</b>. Today you feel that difference on one real job."]},
+    {"h": "Plan first, then let it go", "p": ["Manual mode asks before every file; it is how you learn what the agent does. <dfn>Plan mode</dfn> makes it write the steps first and wait for your yes, which is right for anything that touches your records. Auto is for jobs you have watched succeed several times. The e-log draft today is Plan mode: you want to see the steps before the first draft exists.", "The context ring fills as the chat grows; a long chat gets slower and sloppier. New job, new chat. If a chat must continue, <code>/compact</code> squashes it."], "rule": "Pick the dials for the job, not for the chat: a quick question is Haiku on low; a draft in your voice is Opus on high."}
+  ],
+  "figure": "dials",
+  "clips": [
+    {"v": "HuWjlcj3p9k", "t": 145, "label": "2:25", "title": "The model", "sub": "Match model to task; names will change · 31 s"},
+    {"v": "HuWjlcj3p9k", "t": 176, "label": "2:56", "title": "Effort", "sub": "Medium/high by default; higher burns usage · 21 s"},
+    {"v": "HuWjlcj3p9k", "t": 197, "label": "3:17", "title": "Permission modes", "sub": "Manual to learn, Plan for big changes, Auto for proven work · 72 s"},
+    {"v": "HuWjlcj3p9k", "t": 289, "label": "4:49", "title": "Context window", "sub": "The usage ring, /compact · 34 s"},
+    {"v": "BZluE67z1MA", "t": 0, "label": "0:00", "title": "Austin Marchese: models and effort levels in 19 minutes", "sub": "Shortlist #141 · watch the first 6 minutes; exact time codes come when the session writer has read its transcript"}
+  ],
+  "clipsNote": "Four clips from Tyler Mommsen, one from Austin Marchese.",
+  "check": [
+    {"q": "The agent must read a course journal and draft an e-log entry in your register. Which model for the draft?", "ok": "b", "opts": {"a": "Haiku, it is cheapest", "b": "Opus or Sonnet, the wording has to sound like you", "c": "Fable, always the best"}, "why": "Reading and reformatting is Sonnet work; wording in your voice justifies Opus. Fable is for building the agent, not running it."},
+    {"q": "Which permission mode for today's job?", "ok": "c", "opts": {"a": "Auto, so it just does it", "b": "Manual, approve every file", "c": "Plan, see the steps before the first draft exists"}, "why": "Plan mode shows the steps first; Manual is for learning what it does; Auto is for jobs that have succeeded several times."},
+    {"q": "The context ring is nearly full and the e-log draft is done. You now want to work on a training plan. What do you do?", "ok": "a", "opts": {"a": "Start a new chat in the same folder", "b": "Keep going, the folder is the same", "c": "Raise the effort level"}, "why": "New job, new chat. The folder (and CLAUDE.md) stays; the chat history does not need to."}
+  ],
+  "build": {
+    "where": "in the Code tab on dell-js · 35 min",
+    "folder": "Globus admin agent/",
+    "steps": [
+      {"p": "Copy one course journal into the folder as <b>journals/&lt;course ID&gt;.md</b> (export the Google Doc as Markdown, or paste the last three lessons). Nothing else goes in."},
+      {"p": "New chat. Model <b>Sonnet</b>, effort <b>medium</b>, permission mode <b>Plan</b>. Send:", "pre": "Read CLAUDE.md, then journals/. For the most recent lesson in the journal, draft the Globus e-log entry as a file drafts/<course ID>-lesson-<n>.md with these fields: course ID, lesson number, planned date, actual date, topic, materials used, homework set. Use only what the journal says; leave a field blank rather than guess. Show me the plan first."},
+      {"p": "Approve the plan if it only reads the journal and writes one file in drafts/. Read the draft. Note what is wrong or missing."},
+      {"p": "Same prompt, new chat, model <b>Opus</b>, effort <b>high</b>. Compare the two drafts side by side. Then one more: <b>Haiku</b>, effort <b>low</b>, with this prompt:", "pre": "Compare drafts/<course ID>-lesson-<n>.md with journals/<course ID>.md. List any field in the draft that the journal does not support. One line per field, nothing else."},
+      {"p": "Add two lines to CLAUDE.md under a heading <b>Model rules</b>: which model draws up e-log drafts, and that a Haiku check runs on every draft before you see it. That is the first model split in your agent.", "after": "Three drafts, one check, two rules → session done."}
+    ],
+    "gain": "CLAUDE.md with model rules · journals/ · drafts/ (the e-log draft, checked) · the Opus-builds / Sonnet-runs / Haiku-checks habit"
+  },
+  "next": "<b>Next: Session 3 · make it a skill.</b> The prompt you typed twice today becomes a checklist file the agent runs by name, and the Haiku check becomes part of it."
+}

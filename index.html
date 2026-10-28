@@ -32,8 +32,8 @@ svg text{font-family:var(--body);font-size:15px;fill:var(--fg)}
 .node:hover rect,.node:focus rect{stroke:var(--cool)}
 .node.open rect{stroke:var(--accent);stroke-width:3}
 .node.done rect{stroke:var(--ok);stroke-width:2.5}
-.node text.t{font-weight:600}
-.node text.s{fill:var(--mute);font-size:13px}
+.node text.t{font-weight:600;font-size:14px}
+.node text.s{fill:var(--mute);font-size:12px}
 .node:focus{outline:none}
 .edge{stroke:var(--mute);stroke-width:1.5;fill:none}
 .edge.flow{stroke-dasharray:6 6;animation:flow 1.6s linear infinite}
@@ -138,8 +138,8 @@ dfn{font-style:normal;border-bottom:2px solid var(--cool)}
     S.forEach(function(s,i){
       var x=10+i*step,g=el('g',{class:'node',tabindex:0,'data-n':s.n});
       g.appendChild(el('rect',{x:x,y:40,width:w,height:70,rx:8}));
-      g.appendChild(el('text',{x:x+10,y:64,class:'t'},s.n+' · '+s.title));
-      g.appendChild(el('text',{x:x+10,y:84,class:'s'},s.capability));
+      g.appendChild(el('text',{x:x+10,y:64,class:'t'},(s.n+' · '+s.title).length>20?(s.n+' · '+s.title).slice(0,19)+'…':s.n+' · '+s.title));
+      g.appendChild(el('text',{x:x+10,y:84,class:'s'},s.capability.length>22?s.capability.slice(0,21)+'…':s.capability));
       g.appendChild(el('text',{x:x+10,y:101,class:'s'},s.clips||''));
       svg.appendChild(el('text',{x:x+w/2,y:215,class:'s','text-anchor':'middle'},s.gain));
       if(P['done'+s.n])g.classList.add('done');
